@@ -8,13 +8,13 @@ public class QAPage extends BasePage{
     Boolean control;
     public QAPage(WebDriver driver) {
         super(driver);
-        driver.get("https://useinsider.com/careers/quality-assurance/");
         constants = new Constants();
     }
     //QA sayfası kontrolü
     public boolean controlQaPage(){
+        driver.get("https://useinsider.com/careers/quality-assurance/");
         control = null;
-        if (getUrl("quality")){
+        if (getUrl("quality-assurance/")){
             control =  true;
         }else {
             control = false;
